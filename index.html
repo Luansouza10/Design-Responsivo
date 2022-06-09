@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgba(178, 161, 161, 0.475);
+            max-width: 1200px;
+            font-family: arial, helvetica, sans-serif;
+            font-size: 1.2em;
+            margin-left: 5px;
+            margin-right: 5px;
+
+        }
+
+        p {
+            line-height: 1.1em;
+
+        }
+
+        p+p {
+            text-indent: 1.5em;
+            margin-top: 1.5em;
+
+        }
+
+        #navegacao-principal {
+            position: relative;
+            font-family: monospace;
+            float: left;
+            display: block;
+            width: 100%;
+            margin-left: 0px;
+
+        }
+
+        #menu-principal {
+            list-style: none;
+            padding-left: 0;
+            margin-left: 0px;
+        }
+
+        #menu-principal li {
+            background-color: #27e68072;
+            float: left;
+            padding: 1rem;
+            position: relative;
+            transition-duration: 0.5s;
+            padding-left: 6%;
+            left: 6%;
+
+        }
+
+        #menu-principal {
+            color: rgb(255, 38, 0);
+            text-decoration: none;
+
+        }
+
+        .dropdown {
+            text-decoration: none;
+            list-style: none;
+            visibility: hidden;
+            opacity: 0;
+            min-width: 5rem;
+            position: absolute;
+            transition: all 0.5s ease;
+            margin-top: 1rem;
+            left: 0;
+            display: none;
+            box-shadow: 0px 8px 16px 0px rgb(255, 255, 255);
+            color: #979907;
+
+        }
+
+        .dropdown li {
+            clear: both;
+            width: 100%;
+            text-decoration: none;
+
+        }
+
+        .dropdown li a {
+            text-decoration: none;
+            text-align: right;
+
+        }
+
+        #menu-principal li:hover,
+        #menu-principal li:focus-within {
+            background-color: #181717;
+            color: #cc00ff;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+
+        }
+
+        #menu-principal li a:hover {
+            display: inline-block;
+
+        }
+        #menu-principal li:hover>ul,
+        #menu-principal li:focus-within>ul,
+        .dropdown ul:hover,
+        .dropdown ul:focus {
+            visibility: visible;
+            opacity: 1;
+            display: block;
+
+        }
+
+        @media screen and (max-width:480px) {
+            body {
+                max-width: 480px;
+                font-size: 1.0em;
+
+            }
+
+            #menu-pribcipal {
+                width: auto;
+                height: auto;
+                background-color: rgba(0, 255, 42, 0.478);
+
+            }
+
+            #menu-principal li {
+                background-color: rgba(89, 78, 78, 0.434);
+                text-decoration: none;
+                width: 100%;
+                float: none;
+
+            }
+
+            #menu-principal li a {
+                color: rgb(255, 255, 255);
+                text-align: left;
+                display: block;
+                outline: none;
+
+            }
+
+
+            #menu-principal li:hover,
+            #menu-principal li:focus-within,
+            #menu-principal li a:hover {
+                cursor: pointer;
+                font-weight: bold;
+                color: #10ebbc;
+                background-color: rgb(80, 76, 76);
+                transition: 0.3s;
+                left: 10px;
+
+            }
+
+            .dropdown {
+                position: static;
+                left: 0px;
+                background-color: rgb(15, 200, 12);
+                list-style: none;
+
+            }
+        }
+
+        /* Começo do Flex box*/
+        nav html {
+            font-family: sans-serif;
+        }
+
+        nav body {
+            margin: 0;
+        }
+
+        nav header {
+            background-color: rgb(234, 233, 241);
+            height: auto;
+            width: auto;
+        }
+
+        nav h1 {
+            text-align: center;
+            color: rgb(28, 26, 26);
+            line-height: 2.5em;
+            margin: 0;
+        }
+
+        nav article {
+            padding: 10px;
+            margin: 10px;
+            background-color: rgba(0, 16, 246, 0);
+            flex: 100px;
+        }
+
+        nav article h2 {
+            font-weight: 800;
+        }
+
+        nav article h3 {
+            font-weight: 500;
+        }
+
+        nav section {
+            display: flex;
+            flex-flow: row wrap;
+            font-size: 1.2en;
+
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+
+
+        @media screen and (min-width: 481px) and (max-width: 1024px) {
+            nav article {
+                flex: 40%;
+                font-size: 1.1em;
+            }
+
+            nav header {
+                font-size: 1em;
+            }
+
+
+        }
+
+        @media screen and (max-width: 820px) {
+            nav article {
+                flex: 42%;
+                font-size: 1.1em;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <nav id="navegação-principal">
+        <ul id="menu-principal">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Computador</a>
+            </li>
+            <li><a href="#">Televisão</a>
+            </li>
+
+            <li><a href="#">Smartphone</a>
+            </li>
+    </nav>
+    <nav>
+        <br>
+        <br>
+        <br>
+        <header>
+
+            <h1>As Três melhores marcas de carrros</h1>
+
+        </header>
+
+        <section>
+
+            <article>
+
+                <p>
+                <h2>CARRO 1</h2>
+                <hr>
+                </p>
+
+                <p>
+                <h3>Toyota – 6,52 milhões</h3>
+                </p>
+
+                <p> O primeiro carro é a Toyota é a marca mais vendida no mundo. Boa parte dos emplacamentos vem do mercado japonês e do americano, embora as vendas na China sejam boas também.</p>
+
+                <p>A marca chegou a 8,5% de participação e ainda foi uma das que menos perdeu durante a pandemia, junto com Kia, Mercedes-Benz e BMW.</p>
+
+                
+            </article>
+
+            <article>
+                <p>
+                <h2>CARRO 2</h2>
+                <hr>
+                </p>
+
+                <p>
+                <h3>Volkswagen – 5,97 milhões </h3>
+                </p>
+
+                <p>O segundo carro é O famoso gigante alemão tem na marca VW sua principal marca para vendas em grande volume.</p>
+
+                <p>Com a China como seu maior mercado, superando Alemanha e outros mercados mais antigos da marca, a Volkswagen teve 7,8% de participação.
+                </p>
+            </article>
+
+            <article>
+                <p>
+                <h2>CARRO 3</h2>
+                <hr>
+                </p>
+
+                <p>
+                <h3> Hyundai – 4,10 milhões</h3>
+                </p>
+
+                <p>O terceiro carro é a Hyundai tem forte presença em seu mercado doméstico, a Coreia do Sul, mas são os EUA o de maior volume e participação. Na China, a presença é grande também.</p>
+
+                <p>Com tudo isso, ela acumulou o suficiente para ficar no pódio.</p>
+            </article>
+
+            
+
+            </article>
+        </section>
+    </nav>
+    <!--magens responsivas, usando srcset e sizes. O site com duas imagens com três tamanhos diferentes -->
+    <p></p>
+
+     <img srcset="img/toyota320w.jpg 320w,
+                img/toyota610w.jpg 610w,
+                img/toyota1920w.jpg 1920w, 
+        sizes="
+                (max-width: 320px) 370px,
+                (max-width: 480px) 490px,
+                (max-width: 1920px) 800px,
+                1920px" 
+                src="img/toyota1920w.jpg" alt="Imagem de um carro da Toyota">
+      
+     <img srcset="img/volkswagen950w.jpg 950w,
+                  img/volkswagen800w.jpg 800w,
+                  img/volkswagen1900w.jpg 1900w,
+    
+     sizes="
+                 (max-width: 800px) 320px,
+                 (max-width: 950px) 600px,
+                 (max-width: 1900px) 800px,
+                 1900px" 
+                 
+                 src="img/volkswagen1100w.jpg" alt="Imagem de um carro da volkswagen">
+
+</body>
+
+</html>
+</head>
+<body>
+    
+</body>
+</html>
